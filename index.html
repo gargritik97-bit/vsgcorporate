@@ -1,25 +1,803 @@
 <!DOCTYPE html>
-VSG Corporate Services Pvt. Ltd.
-V.S.G Corporate Services Pvt. Ltd.
-Financial Consulting | Project Financing | One Time Settlement
-About Us
-Established in 2002, V.S.G Corporate Services Pvt. Ltd. is a consulting company specializing in project financing and one-time settlements. With over 24 years of experience, we help businesses and individuals raise funds from banks and NBFCs across India.
-Our Services
-Debt Fund Raising (Project Financing)
-One Time Settlement (OTS)
-Bank Guarantees & Letter of Credit
-Working Capital & Term Loans
-Project Financing
-We assist clients in preparing project reports, negotiating with banks, and raising funds for machinery, construction, and working capital needs.
-One Time Settlement (OTS)
-We help clients settle NPAs with banks at reduced terms, acting as a mediator to ensure beneficial outcomes for both parties.
-Our Clients & Sectors
-We serve industries including Manufacturing, Hospitality, Healthcare, NBFCs, Traders, and Service Providers.
-Our Leadership
-CA Suresh Garg – Director, 25+ years experience in financial consultancy.
-CA Ritik Garg – Director, specializes in debt financing solutions.
-Contact Us
-Address: 204, ShivGyan Avenue, C-Scheme, Jaipur
-Phone: +91-8233937501 | +91-9829056921
-Email: garg.ritik97@gmail.com
-© 2026 VSG Corporate Services Pvt. Ltd. All Rights Reserved
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VSG Corporate Services Pvt. Ltd. | Financial Consultancy</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --navy: #0D2340;
+      --gold: #C49A2B;
+      --gold-light: #E8C55A;
+      --cream: #F9F7F2;
+      --white: #FFFFFF;
+      --text: #1C1C1C;
+      --muted: #5A6070;
+      --border: #E2DDD5;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--white);
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      background: rgba(13, 35, 64, 0.97);
+      backdrop-filter: blur(8px);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 5%;
+      height: 68px;
+      border-bottom: 1px solid rgba(196,154,43,0.3);
+    }
+
+    .nav-brand {
+      display: flex; align-items: center; gap: 12px;
+      text-decoration: none;
+    }
+    .nav-logo-circle {
+      width: 40px; height: 40px; border-radius: 50%;
+      background: linear-gradient(135deg, var(--gold), var(--gold-light));
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'Playfair Display', serif;
+      font-size: 16px; font-weight: 700; color: var(--navy);
+      flex-shrink: 0;
+    }
+    .nav-brand-text { color: var(--white); }
+    .nav-brand-text strong {
+      display: block; font-size: 14px; font-weight: 600; letter-spacing: 0.04em;
+    }
+    .nav-brand-text span { font-size: 10px; color: var(--gold-light); letter-spacing: 0.1em; text-transform: uppercase; }
+
+    .nav-links {
+      display: flex; align-items: center; gap: 28px; list-style: none;
+    }
+    .nav-links a {
+      color: rgba(255,255,255,0.8); text-decoration: none;
+      font-size: 13px; font-weight: 500; letter-spacing: 0.04em;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--gold-light); }
+
+    .nav-cta {
+      background: var(--gold); color: var(--navy) !important;
+      padding: 8px 20px; border-radius: 4px;
+      font-weight: 600 !important;
+      transition: background 0.2s !important;
+    }
+    .nav-cta:hover { background: var(--gold-light) !important; }
+
+    /* ── HERO ── */
+    #home {
+      min-height: 100vh;
+      background: linear-gradient(160deg, var(--navy) 0%, #152E52 55%, #1A3A63 100%);
+      display: flex; align-items: center;
+      padding: 100px 5% 60px;
+      position: relative; overflow: hidden;
+    }
+    #home::before {
+      content: '';
+      position: absolute; top: -80px; right: -80px;
+      width: 600px; height: 600px; border-radius: 50%;
+      background: radial-gradient(circle, rgba(196,154,43,0.12) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    #home::after {
+      content: '';
+      position: absolute; bottom: -120px; left: 10%;
+      width: 400px; height: 400px; border-radius: 50%;
+      background: radial-gradient(circle, rgba(196,154,43,0.07) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .hero-inner {
+      max-width: 1200px; margin: 0 auto;
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 60px; align-items: center;
+      position: relative; z-index: 1;
+    }
+
+    .hero-eyebrow {
+      display: inline-flex; align-items: center; gap: 10px;
+      font-size: 11px; font-weight: 600; letter-spacing: 0.18em;
+      text-transform: uppercase; color: var(--gold);
+      margin-bottom: 24px;
+    }
+    .hero-eyebrow::before {
+      content: ''; display: block;
+      width: 32px; height: 1px; background: var(--gold);
+    }
+
+    .hero-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(36px, 4.5vw, 58px);
+      font-weight: 700; line-height: 1.2;
+      color: var(--white); margin-bottom: 20px;
+    }
+    .hero-title em {
+      font-style: normal; color: var(--gold-light);
+    }
+
+    .hero-subtitle {
+      font-size: 16px; color: rgba(255,255,255,0.7);
+      max-width: 480px; margin-bottom: 40px; line-height: 1.8;
+    }
+
+    .hero-btns { display: flex; gap: 16px; flex-wrap: wrap; }
+
+    .btn-primary {
+      background: var(--gold); color: var(--navy);
+      padding: 14px 32px; border-radius: 4px;
+      font-weight: 600; font-size: 14px; letter-spacing: 0.04em;
+      text-decoration: none; display: inline-block;
+      transition: background 0.2s, transform 0.15s;
+    }
+    .btn-primary:hover { background: var(--gold-light); transform: translateY(-1px); }
+
+    .btn-outline {
+      border: 1px solid rgba(255,255,255,0.35); color: var(--white);
+      padding: 14px 32px; border-radius: 4px;
+      font-weight: 500; font-size: 14px;
+      text-decoration: none; display: inline-block;
+      transition: border-color 0.2s, background 0.2s;
+    }
+    .btn-outline:hover { border-color: var(--gold); background: rgba(196,154,43,0.1); }
+
+    /* hero right: stats card */
+    .hero-stats {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(196,154,43,0.25);
+      border-radius: 12px; padding: 40px;
+      backdrop-filter: blur(10px);
+    }
+    .hero-stats h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 18px; color: var(--gold-light);
+      margin-bottom: 28px; letter-spacing: 0.02em;
+    }
+    .stat-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
+    .stat-item { }
+    .stat-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 40px; font-weight: 700; color: var(--white);
+      line-height: 1;
+    }
+    .stat-num span { color: var(--gold); }
+    .stat-label { font-size: 12px; color: rgba(255,255,255,0.55); margin-top: 6px; text-transform: uppercase; letter-spacing: 0.08em; }
+
+    .stat-divider { grid-column: 1/-1; height: 1px; background: rgba(255,255,255,0.08); }
+
+    .bank-badges { grid-column: 1/-1; margin-top: 4px; }
+    .bank-badges p { font-size: 11px; color: rgba(255,255,255,0.45); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 12px; }
+    .badges { display: flex; flex-wrap: wrap; gap: 8px; }
+    .badge {
+      background: rgba(255,255,255,0.08); border: 1px solid rgba(196,154,43,0.2);
+      color: rgba(255,255,255,0.8); font-size: 11px; font-weight: 500;
+      padding: 5px 12px; border-radius: 20px; letter-spacing: 0.04em;
+    }
+
+    /* ── SECTION COMMONS ── */
+    section { padding: 90px 5%; }
+    .section-inner { max-width: 1200px; margin: 0 auto; }
+
+    .section-eyebrow {
+      display: inline-flex; align-items: center; gap: 10px;
+      font-size: 11px; font-weight: 600; letter-spacing: 0.18em;
+      text-transform: uppercase; color: var(--gold);
+      margin-bottom: 14px;
+    }
+    .section-eyebrow::before {
+      content: ''; width: 28px; height: 1px; background: var(--gold);
+    }
+
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(28px, 3.5vw, 42px); font-weight: 700;
+      color: var(--navy); line-height: 1.25; margin-bottom: 16px;
+    }
+    .section-desc {
+      font-size: 16px; color: var(--muted); max-width: 600px; line-height: 1.8;
+    }
+
+    /* ── ABOUT ── */
+    #about { background: var(--cream); }
+
+    .about-grid {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 70px; align-items: start; margin-top: 60px;
+    }
+    .about-text p { color: var(--muted); font-size: 15px; margin-bottom: 18px; line-height: 1.85; }
+
+    .about-details {
+      background: var(--white); border: 1px solid var(--border);
+      border-radius: 8px; padding: 32px;
+      display: grid; gap: 16px;
+    }
+    .detail-row { display: flex; gap: 16px; align-items: flex-start; }
+    .detail-label { font-size: 11px; font-weight: 600; color: var(--gold); text-transform: uppercase; letter-spacing: 0.08em; min-width: 110px; padding-top: 2px; }
+    .detail-val { font-size: 13px; color: var(--text); font-weight: 500; }
+    .detail-divider { height: 1px; background: var(--border); }
+
+    .dsa-title { font-size: 13px; font-weight: 600; color: var(--navy); margin-bottom: 12px; }
+    .dsa-list { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+    .dsa-list li {
+      display: flex; align-items: center; gap: 10px;
+      font-size: 13px; color: var(--muted);
+    }
+    .dsa-list li::before {
+      content: ''; width: 6px; height: 6px; border-radius: 50%;
+      background: var(--gold); flex-shrink: 0;
+    }
+
+    /* ── SERVICES ── */
+    #services { background: var(--white); }
+    .services-header { margin-bottom: 52px; }
+
+    .services-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+
+    .service-card {
+      background: var(--cream); border: 1px solid var(--border);
+      border-radius: 10px; padding: 36px 30px;
+      position: relative; overflow: hidden;
+      transition: box-shadow 0.25s, transform 0.2s;
+    }
+    .service-card:hover { box-shadow: 0 12px 40px rgba(13,35,64,0.1); transform: translateY(-3px); }
+    .service-card::before {
+      content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+      background: linear-gradient(90deg, var(--gold), var(--gold-light));
+    }
+
+    .service-icon {
+      width: 48px; height: 48px; background: var(--navy);
+      border-radius: 8px; display: flex; align-items: center; justify-content: center;
+      margin-bottom: 20px;
+    }
+    .service-icon svg { width: 24px; height: 24px; fill: var(--gold); }
+
+    .service-card h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 20px; color: var(--navy); margin-bottom: 12px;
+    }
+    .service-card p { font-size: 14px; color: var(--muted); line-height: 1.8; margin-bottom: 20px; }
+
+    .service-points { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+    .service-points li {
+      font-size: 13px; color: var(--text);
+      display: flex; align-items: flex-start; gap: 10px;
+    }
+    .service-points li::before {
+      content: '→'; color: var(--gold); font-weight: 700; flex-shrink: 0; margin-top: 1px;
+    }
+
+    /* ── SECTORS ── */
+    #sectors { background: var(--navy); padding: 80px 5%; }
+    #sectors .section-title { color: var(--white); }
+
+    .sectors-grid {
+      display: grid; grid-template-columns: repeat(6, 1fr);
+      gap: 16px; margin-top: 48px;
+    }
+    .sector-chip {
+      background: rgba(255,255,255,0.06); border: 1px solid rgba(196,154,43,0.25);
+      border-radius: 8px; padding: 20px 12px;
+      text-align: center; color: rgba(255,255,255,0.8);
+      font-size: 13px; font-weight: 500;
+      transition: background 0.2s, border-color 0.2s;
+      cursor: default;
+    }
+    .sector-chip:hover { background: rgba(196,154,43,0.15); border-color: var(--gold); color: var(--white); }
+    .sector-chip span { display: block; font-size: 22px; margin-bottom: 8px; }
+
+    /* ── TEAM ── */
+    #team { background: var(--cream); }
+    .team-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 36px; margin-top: 52px; }
+
+    .team-card {
+      background: var(--white); border: 1px solid var(--border);
+      border-radius: 10px; padding: 40px; display: flex; gap: 28px;
+      transition: box-shadow 0.25s;
+    }
+    .team-card:hover { box-shadow: 0 10px 36px rgba(13,35,64,0.08); }
+
+    .team-avatar {
+      width: 72px; height: 72px; border-radius: 50%; flex-shrink: 0;
+      background: linear-gradient(135deg, var(--navy), #1A3A63);
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'Playfair Display', serif;
+      font-size: 26px; font-weight: 700; color: var(--gold);
+    }
+    .team-info h3 { font-family: 'Playfair Display', serif; font-size: 20px; color: var(--navy); }
+    .team-info .role {
+      font-size: 12px; font-weight: 600; color: var(--gold); text-transform: uppercase;
+      letter-spacing: 0.1em; margin: 6px 0 14px;
+    }
+    .team-info p { font-size: 14px; color: var(--muted); line-height: 1.8; }
+    .team-tag {
+      display: inline-block; background: rgba(13,35,64,0.07);
+      font-size: 11px; font-weight: 600; color: var(--navy);
+      padding: 3px 10px; border-radius: 20px; margin-top: 12px;
+    }
+
+    /* ── CONTACT ── */
+    #contact { background: var(--white); }
+    .contact-grid {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 60px; margin-top: 52px; align-items: start;
+    }
+
+    .contact-info { display: flex; flex-direction: column; gap: 24px; }
+    .contact-item { display: flex; gap: 16px; align-items: flex-start; }
+    .contact-icon {
+      width: 44px; height: 44px; border-radius: 8px;
+      background: var(--navy); display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+    }
+    .contact-icon svg { width: 20px; height: 20px; fill: var(--gold); }
+    .contact-label { font-size: 11px; font-weight: 600; color: var(--gold); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 4px; }
+    .contact-val { font-size: 14px; color: var(--text); line-height: 1.7; }
+    .contact-val a { color: var(--navy); text-decoration: none; }
+    .contact-val a:hover { color: var(--gold); }
+
+    .contact-form { background: var(--cream); border: 1px solid var(--border); border-radius: 10px; padding: 40px; }
+    .contact-form h3 { font-family: 'Playfair Display', serif; font-size: 22px; color: var(--navy); margin-bottom: 24px; }
+
+    .form-group { margin-bottom: 18px; }
+    .form-group label { display: block; font-size: 12px; font-weight: 600; color: var(--navy); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 8px; }
+    .form-group input, .form-group textarea, .form-group select {
+      width: 100%; background: var(--white);
+      border: 1px solid var(--border); border-radius: 6px;
+      padding: 12px 14px; font-family: 'Inter', sans-serif;
+      font-size: 14px; color: var(--text);
+      transition: border-color 0.2s;
+      outline: none;
+    }
+    .form-group input:focus, .form-group textarea:focus, .form-group select:focus { border-color: var(--gold); }
+    .form-group textarea { resize: vertical; min-height: 110px; }
+
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+
+    .form-submit {
+      width: 100%; background: var(--navy); color: var(--white);
+      border: none; padding: 14px; border-radius: 6px;
+      font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 600;
+      letter-spacing: 0.04em; cursor: pointer;
+      transition: background 0.2s;
+    }
+    .form-submit:hover { background: var(--gold); color: var(--navy); }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--navy); border-top: 1px solid rgba(196,154,43,0.2);
+      padding: 60px 5% 28px;
+    }
+    .footer-inner { max-width: 1200px; margin: 0 auto; }
+    .footer-top { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 60px; margin-bottom: 48px; }
+
+    .footer-brand { }
+    .footer-logo {
+      display: flex; align-items: center; gap: 12px; margin-bottom: 18px;
+    }
+    .footer-logo-circle {
+      width: 44px; height: 44px; border-radius: 50%;
+      background: linear-gradient(135deg, var(--gold), var(--gold-light));
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'Playfair Display', serif; font-size: 17px; font-weight: 700; color: var(--navy);
+    }
+    .footer-logo-text strong { display: block; color: var(--white); font-size: 15px; }
+    .footer-logo-text span { font-size: 11px; color: var(--gold-light); letter-spacing: 0.08em; }
+    .footer-brand p { font-size: 13px; color: rgba(255,255,255,0.5); line-height: 1.8; max-width: 300px; }
+
+    .footer-col h4 { font-size: 12px; font-weight: 600; color: var(--gold); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 18px; }
+    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .footer-col ul li a { font-size: 13px; color: rgba(255,255,255,0.55); text-decoration: none; transition: color 0.2s; }
+    .footer-col ul li a:hover { color: var(--gold-light); }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.07);
+      padding-top: 24px; display: flex; justify-content: space-between; align-items: center;
+    }
+    .footer-bottom p { font-size: 12px; color: rgba(255,255,255,0.35); }
+    .footer-reg { font-size: 11px; color: rgba(255,255,255,0.25); text-align: right; line-height: 1.6; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 1024px) {
+      .sectors-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+    @media (max-width: 768px) {
+      .hero-inner, .about-grid, .services-grid, .team-grid, .contact-grid, .footer-top {
+        grid-template-columns: 1fr;
+      }
+      .sectors-grid { grid-template-columns: repeat(2, 1fr); }
+      .form-row { grid-template-columns: 1fr; }
+      .nav-links { display: none; }
+      .hero-stats { order: -1; }
+      .stat-grid { grid-template-columns: repeat(2, 1fr); }
+      .footer-bottom { flex-direction: column; gap: 8px; text-align: center; }
+      .footer-reg { text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ═══ NAV ═══ -->
+<nav>
+  <a href="#home" class="nav-brand">
+    <div class="nav-logo-circle">VSG</div>
+    <div class="nav-brand-text">
+      <strong>VSG Corporate Services</strong>
+      <span>Pvt. Ltd.</span>
+    </div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#sectors">Sectors</a></li>
+    <li><a href="#team">Team</a></li>
+    <li><a href="#contact" class="nav-cta">Contact Us</a></li>
+  </ul>
+</nav>
+
+<!-- ═══ HERO ═══ -->
+<section id="home">
+  <div class="hero-inner">
+    <div class="hero-left">
+      <div class="hero-eyebrow">Established 2002 · Jaipur, India</div>
+      <h1 class="hero-title">
+        Trusted Financial<br/>
+        <em>Consultancy</em><br/>
+        Across India
+      </h1>
+      <p class="hero-subtitle">
+        Specialising in Project Financing, One Time Settlement, and Non-Fund Based Financing — helping businesses and individuals raise debt funds from nationalised banks, private banks & NBFCs.
+      </p>
+      <div class="hero-btns">
+        <a href="#services" class="btn-primary">Explore Services</a>
+        <a href="#contact" class="btn-outline">Get in Touch</a>
+      </div>
+    </div>
+
+    <div class="hero-stats">
+      <h3>Our Track Record</h3>
+      <div class="stat-grid">
+        <div class="stat-item">
+          <div class="stat-num">24<span>+</span></div>
+          <div class="stat-label">Years of Experience</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">3<span>+</span></div>
+          <div class="stat-label">DSA Partnerships</div>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <div class="stat-num">PAN<span></span></div>
+          <div class="stat-label">India Coverage</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">2<span></span></div>
+          <div class="stat-label">CA Directors</div>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="bank-badges">
+          <p>Empanelled DSA Banks</p>
+          <div class="badges">
+            <span class="badge">Bank of Baroda</span>
+            <span class="badge">Punjab & Sindh Bank</span>
+            <span class="badge">ICICI Bank</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ ABOUT ═══ -->
+<section id="about">
+  <div class="section-inner">
+    <div class="section-eyebrow">Who We Are</div>
+    <h2 class="section-title">A Legacy of Financial Excellence</h2>
+    <p class="section-desc">For over two decades, VSG Corporate Services has delivered reliable, expert financial consultancy to businesses and individuals across India.</p>
+
+    <div class="about-grid">
+      <div class="about-text">
+        <p>Established in 2002, V.S.G Corporate Services Pvt. Ltd. is a consulting company specialising in Project Financing and One Time Settlements. We help businesses and individuals raise debt funds from nationalised and private banks as well as NBFCs.</p>
+        <p>With more than 24 years of experience and a team of highly competent professionals, we provide efficacious solutions to our clients' needs. Our vision is to deliver continuous, excellent and timely solutions to every client we serve.</p>
+        <p>Headquartered in Jaipur, we provide services across the country. The company is empanelled as a Direct Selling Agent (DSA) in various nationalised and private banks in India, ensuring clients have access to a wide network of financial institutions.</p>
+      </div>
+
+      <div>
+        <div class="about-details">
+          <div class="detail-row">
+            <div class="detail-label">Incorporated</div>
+            <div class="detail-val">18th April 2002</div>
+          </div>
+          <div class="detail-divider"></div>
+          <div class="detail-row">
+            <div class="detail-label">PAN No.</div>
+            <div class="detail-val">AACCV0416G</div>
+          </div>
+          <div class="detail-divider"></div>
+          <div class="detail-row">
+            <div class="detail-label">GSTIN</div>
+            <div class="detail-val">08AACCV0416G2ZM</div>
+          </div>
+          <div class="detail-divider"></div>
+          <div class="detail-row">
+            <div class="detail-label">CIN</div>
+            <div class="detail-val">U67190RJ2002PTC017565</div>
+          </div>
+          <div class="detail-divider"></div>
+          <div>
+            <div class="dsa-title">Empanelled DSA Banks</div>
+            <ul class="dsa-list">
+              <li>Bank of Baroda</li>
+              <li>Punjab &amp; Sindh Bank</li>
+              <li>ICICI Bank</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ SERVICES ═══ -->
+<section id="services">
+  <div class="section-inner">
+    <div class="services-header">
+      <div class="section-eyebrow">What We Do</div>
+      <h2 class="section-title">Comprehensive Financial Services</h2>
+      <p class="section-desc">With over 23 years of experience in project and retail financing, we offer expert consultancy across a wide range of financial needs.</p>
+    </div>
+
+    <div class="services-grid">
+
+      <!-- Service 1 -->
+      <div class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17.93V18h-2v1.93C7.05 19.44 4.56 16.95 4.07 14H6v-2H4.07C4.56 9.05 7.05 6.56 10 6.07V8h2V6.07c2.95.49 5.44 2.98 5.93 5.93H16v2h1.93c-.49 2.95-2.98 5.44-5.93 5.93z"/></svg>
+        </div>
+        <h3>Project Financing</h3>
+        <p>Long-term infrastructure, industrial projects and public services using non-recourse or limited-recourse financial structures via nationalised and private banks & NBFCs.</p>
+        <ul class="service-points">
+          <li>Preparation of detailed project reports</li>
+          <li>Negotiating best deals on collateral & T&amp;C</li>
+          <li>Term loans for machinery purchase</li>
+          <li>Term loans for unit construction</li>
+          <li>Working capital fund raising</li>
+        </ul>
+      </div>
+
+      <!-- Service 2 -->
+      <div class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24"><path d="M9 16.2L4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4L9 16.2z"/></svg>
+        </div>
+        <h3>One Time Settlement</h3>
+        <p>We act as mediator between banks and clients to settle Non-Performing Assets (NPAs) at a reduced, mutually beneficial price — resolving financial and legal burdens efficiently.</p>
+        <ul class="service-points">
+          <li>NPA resolution at reduced price</li>
+          <li>Legal &amp; financial burden relief</li>
+          <li>Mediation between bank &amp; borrower</li>
+          <li>Strong team of dedicated professionals</li>
+          <li>Interest of all parties protected</li>
+        </ul>
+      </div>
+
+      <!-- Service 3 -->
+      <div class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.11 0-2 .89-2 2v12c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V6c0-1.11-.89-2-2-2zm0 14H4v-6h16v6zm0-10H4V6h16v2z"/></svg>
+        </div>
+        <h3>Non-Fund Based Financing</h3>
+        <p>Bank Guarantees and Letters of Credit for government and international private projects — enabling businesses to fulfil obligations without immediate cash outlay.</p>
+        <ul class="service-points">
+          <li>Bank Guarantee (BG) facilitation</li>
+          <li>Letter of Credit (LC) facilitation</li>
+          <li>Government &amp; international projects</li>
+          <li>No direct cash transfer required</li>
+          <li>Secure commitment-based financing</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══ SECTORS ═══ -->
+<section id="sectors">
+  <div class="section-inner">
+    <div class="section-eyebrow" style="color:var(--gold)">Industries We Serve</div>
+    <h2 class="section-title">Across Every Sector</h2>
+    <p class="section-desc" style="color:rgba(255,255,255,0.55)">We help every sector of business raise funds — from manufacturing to services.</p>
+
+    <div class="sectors-grid">
+      <div class="sector-chip"><span>🏭</span>Manufacturing</div>
+      <div class="sector-chip"><span>🏨</span>Hotels &amp; Tourism</div>
+      <div class="sector-chip"><span>🏥</span>Hospitals</div>
+      <div class="sector-chip"><span>🏦</span>NBFCs</div>
+      <div class="sector-chip"><span>🛒</span>Traders</div>
+      <div class="sector-chip"><span>⚙️</span>Service Providers</div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ TEAM ═══ -->
+<section id="team">
+  <div class="section-inner">
+    <div class="section-eyebrow">Leadership</div>
+    <h2 class="section-title">Our Founders</h2>
+    <p class="section-desc">Experienced Chartered Accountants with deep expertise in financial consultancy and debt financing across India.</p>
+
+    <div class="team-grid">
+      <div class="team-card">
+        <div class="team-avatar">SG</div>
+        <div class="team-info">
+          <h3>CA Suresh Garg</h3>
+          <div class="role">Director &amp; Founder</div>
+          <p>A qualified Chartered Accountant and commerce graduate from Rajasthan University with 25 years in financial consultancy. He manages clients' financial requirements across private and nationalised banks.</p>
+          <p style="margin-top:10px">Currently a member of the Tax Association of India, and former Chairman of the Jaipur Branch of the Institute of Chartered Accountants of India.</p>
+          <span class="team-tag">Registered Insolvency Professional · IBC</span>
+        </div>
+      </div>
+
+      <div class="team-card">
+        <div class="team-avatar">RG</div>
+        <div class="team-info">
+          <h3>CA Ritik Garg</h3>
+          <div class="role">Director</div>
+          <p>A qualified Chartered Accountant and commerce graduate from Rajasthan University with 5 years of experience in financial consultancy.</p>
+          <p style="margin-top:10px">Working alongside his father, he ensures clients' debt financial needs are fulfilled at the earliest and at the best possible terms and conditions.</p>
+          <span class="team-tag">Financial Consultancy · Debt Financing</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ CONTACT ═══ -->
+<section id="contact">
+  <div class="section-inner">
+    <div class="section-eyebrow">Get In Touch</div>
+    <h2 class="section-title">Let's Discuss Your Requirements</h2>
+    <p class="section-desc">Reach out to us for any project financing, OTS or non-fund based financing needs. We're here to help.</p>
+
+    <div class="contact-grid">
+      <div class="contact-info">
+        <div class="contact-item">
+          <div class="contact-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+          </div>
+          <div>
+            <div class="contact-label">Office Address</div>
+            <div class="contact-val">204, ShivGyan Avenue, Plot No. 2,<br/>Yudhister Marg, C-Scheme,<br/>Jaipur – 302005, Rajasthan</div>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="contact-icon">
+            <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+          </div>
+          <div>
+            <div class="contact-label">Mobile Numbers</div>
+            <div class="contact-val">
+              <a href="tel:+918233937501">+91-8233937501</a><br/>
+              <a href="tel:+919829056921">+91-9829056921</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="contact-icon">
+            <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+          </div>
+          <div>
+            <div class="contact-label">Email Address</div>
+            <div class="contact-val">
+              <a href="mailto:garg.ritik97@gmail.com">garg.ritik97@gmail.com</a><br/>
+              <a href="mailto:vsg_sgarg@yahoo.com">vsg_sgarg@yahoo.com</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-form">
+        <h3>Send Us a Message</h3>
+        <div class="form-row">
+          <div class="form-group">
+            <label>First Name</label>
+            <input type="text" placeholder="Your first name" />
+          </div>
+          <div class="form-group">
+            <label>Last Name</label>
+            <input type="text" placeholder="Your last name" />
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Mobile Number</label>
+          <input type="tel" placeholder="+91 XXXXX XXXXX" />
+        </div>
+        <div class="form-group">
+          <label>Email Address</label>
+          <input type="email" placeholder="your@email.com" />
+        </div>
+        <div class="form-group">
+          <label>Service Required</label>
+          <select>
+            <option value="">Select a service…</option>
+            <option>Project Financing</option>
+            <option>One Time Settlement (OTS)</option>
+            <option>Bank Guarantee / Letter of Credit</option>
+            <option>Debt Fund Raising</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Message</label>
+          <textarea placeholder="Briefly describe your requirement…"></textarea>
+        </div>
+        <button class="form-submit">Send Message →</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FOOTER ═══ -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <div class="footer-logo-circle">VSG</div>
+          <div class="footer-logo-text">
+            <strong>VSG Corporate Services</strong>
+            <span>Private Limited</span>
+          </div>
+        </div>
+        <p>A trusted financial consultancy established in 2002. Specialising in Project Financing, One Time Settlement and Non-Fund Based Financing — serving clients across India.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#services">Project Financing</a></li>
+          <li><a href="#services">One Time Settlement</a></li>
+          <li><a href="#services">Bank Guarantee</a></li>
+          <li><a href="#services">Letter of Credit</a></li>
+          <li><a href="#services">Debt Fund Raising</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#team">Our Team</a></li>
+          <li><a href="#sectors">Sectors We Serve</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2024 V.S.G Corporate Services Pvt. Ltd. All rights reserved.</p>
+      <div class="footer-reg">
+        CIN: U67190RJ2002PTC017565 &nbsp;|&nbsp; GSTIN: 08AACCV0416G2ZM<br/>
+        PAN: AACCV0416G
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
