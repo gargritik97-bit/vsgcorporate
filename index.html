@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>VSG Corporate Services Pvt. Ltd. | Financial Consultancy</title>
+  <title>VSG Corporate Services | Financial Consultant</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
   <style>
     :root {
@@ -78,7 +78,7 @@
     /* ── HERO ── */
     #home {
       min-height: 100vh;
-      background: linear-gradient(160deg, var(--navy) 0%, #152E52 55%, #1A3A63 100%);
+      background: linear-gradient(90deg, var(--white) 0%, var(--white) 50%, var(--navy) 50%, var(--navy) 100%);
       display: flex; align-items: center;
       padding: 100px 5% 60px;
       position: relative; overflow: hidden;
@@ -92,7 +92,7 @@
     }
     #home::after {
       content: '';
-      position: absolute; bottom: -120px; left: 10%;
+      position: absolute; bottom: -120px; left: 60%;
       width: 400px; height: 400px; border-radius: 50%;
       background: radial-gradient(circle, rgba(196,154,43,0.07) 0%, transparent 70%);
       pointer-events: none;
@@ -120,15 +120,21 @@
       font-family: 'Playfair Display', serif;
       font-size: clamp(36px, 4.5vw, 58px);
       font-weight: 700; line-height: 1.2;
-      color: var(--white); margin-bottom: 20px;
+      color: var(--navy); margin-bottom: 12px;
     }
     .hero-title em {
-      font-style: normal; color: var(--gold-light);
+      font-style: normal; color: var(--gold);
+    }
+
+    .hero-tagline {
+      font-size: 15px; font-weight: 500; color: var(--gold);
+      letter-spacing: 0.03em; margin-bottom: 24px;
     }
 
     .hero-subtitle {
-      font-size: 16px; color: rgba(255,255,255,0.7);
+      font-size: 16px; color: var(--muted);
       max-width: 480px; margin-bottom: 40px; line-height: 1.8;
+      text-align: justify;
     }
 
     .hero-btns { display: flex; gap: 16px; flex-wrap: wrap; }
@@ -143,13 +149,13 @@
     .btn-primary:hover { background: var(--gold-light); transform: translateY(-1px); }
 
     .btn-outline {
-      border: 1px solid rgba(255,255,255,0.35); color: var(--white);
+      border: 1px solid var(--navy); color: var(--navy);
       padding: 14px 32px; border-radius: 4px;
       font-weight: 500; font-size: 14px;
       text-decoration: none; display: inline-block;
       transition: border-color 0.2s, background 0.2s;
     }
-    .btn-outline:hover { border-color: var(--gold); background: rgba(196,154,43,0.1); }
+    .btn-outline:hover { border-color: var(--gold); background: rgba(196,154,43,0.08); }
 
     /* hero right: stats card */
     .hero-stats {
@@ -242,7 +248,7 @@
     .services-header { margin-bottom: 52px; }
 
     .services-grid {
-      display: grid; grid-template-columns: repeat(3, 1fr);
+      display: grid; grid-template-columns: repeat(2, 1fr);
       gap: 28px;
     }
 
@@ -405,7 +411,7 @@
 
     .footer-bottom {
       border-top: 1px solid rgba(255,255,255,0.07);
-      padding-top: 24px; display: flex; justify-content: space-between; align-items: center;
+      padding-top: 24px; display: flex; justify-content: center; align-items: center;
     }
     .footer-bottom p { font-size: 12px; color: rgba(255,255,255,0.35); }
     .footer-reg { font-size: 11px; color: rgba(255,255,255,0.25); text-align: right; line-height: 1.6; }
@@ -418,6 +424,8 @@
       .hero-inner, .about-grid, .services-grid, .team-grid, .contact-grid, .footer-top {
         grid-template-columns: 1fr;
       }
+      #home { background: var(--white); }
+      .hero-stats { background: var(--navy); }
       .sectors-grid { grid-template-columns: repeat(2, 1fr); }
       .form-row { grid-template-columns: 1fr; }
       .nav-links { display: none; }
@@ -436,7 +444,7 @@
     <div class="nav-logo-circle">VSG</div>
     <div class="nav-brand-text">
       <strong>VSG Corporate Services</strong>
-      <span>Pvt. Ltd.</span>
+      <span>Connecting Capital. Empowering Growth</span>
     </div>
   </a>
   <ul class="nav-links">
@@ -455,9 +463,10 @@
       <div class="hero-eyebrow">Established 2002 · Jaipur, India</div>
       <h1 class="hero-title">
         Trusted Financial<br/>
-        <em>Consultancy</em><br/>
+        <em>Consultant</em><br/>
         Across India
       </h1>
+      <p class="hero-tagline">Connecting Capital. Empowering Growth.</p>
       <p class="hero-subtitle">
         Specialising in Project Financing, One Time Settlement, and Non-Fund Based Financing — helping businesses and individuals raise debt funds from nationalised banks, private banks & NBFCs.
       </p>
@@ -475,26 +484,17 @@
           <div class="stat-label">Years of Experience</div>
         </div>
         <div class="stat-item">
-          <div class="stat-num">3<span>+</span></div>
-          <div class="stat-label">DSA Partnerships</div>
+          <div class="stat-num">₹1000<span>Cr+</span></div>
+          <div class="stat-label">Debt Syndicated</div>
         </div>
         <div class="stat-divider"></div>
         <div class="stat-item">
-          <div class="stat-num">PAN<span></span></div>
-          <div class="stat-label">India Coverage</div>
+          <div class="stat-num">100<span>+</span></div>
+          <div class="stat-label">Clients Served</div>
         </div>
         <div class="stat-item">
-          <div class="stat-num">2<span></span></div>
-          <div class="stat-label">CA Directors</div>
-        </div>
-        <div class="stat-divider"></div>
-        <div class="bank-badges">
-          <p>Empanelled DSA Banks</p>
-          <div class="badges">
-            <span class="badge">Bank of Baroda</span>
-            <span class="badge">Punjab & Sindh Bank</span>
-            <span class="badge">ICICI Bank</span>
-          </div>
+          <div class="stat-num">20<span>+</span></div>
+          <div class="stat-label">Lending Relationships</div>
         </div>
       </div>
     </div>
@@ -510,8 +510,8 @@
 
     <div class="about-grid">
       <div class="about-text">
-        <p>Established in 2002, V.S.G Corporate Services Pvt. Ltd. is a consulting company specialising in Project Financing and One Time Settlements. We help businesses and individuals raise debt funds from nationalised and private banks as well as NBFCs.</p>
-        <p>With more than 24 years of experience and a team of highly competent professionals, we provide efficacious solutions to our clients' needs. Our vision is to deliver continuous, excellent and timely solutions to every client we serve.</p>
+        <p>With over two decades of experience, VSG Corporate Services specialises in Project Finance, One-Time Settlements, Corporate Debt Advisory, Working Capital Finance, Non-Fund Based Finance & Structured Funding Solutions.</p>
+        <p>We help businesses access the right capital through our extensive network of banks, financial institutions, and NBFCs across India. We provide end-to-end support, from financial assessment and lender identification to documentation, negotiations, and successful fund disbursement.</p>
         <p>Headquartered in Jaipur, we provide services across the country. The company is empanelled as a Direct Selling Agent (DSA) in various nationalised and private banks in India, ensuring clients have access to a wide network of financial institutions.</p>
       </div>
 
@@ -536,15 +536,6 @@
             <div class="detail-label">CIN</div>
             <div class="detail-val">U67190RJ2002PTC017565</div>
           </div>
-          <div class="detail-divider"></div>
-          <div>
-            <div class="dsa-title">Empanelled DSA Banks</div>
-            <ul class="dsa-list">
-              <li>Bank of Baroda</li>
-              <li>Punjab &amp; Sindh Bank</li>
-              <li>ICICI Bank</li>
-            </ul>
-          </div>
         </div>
       </div>
     </div>
@@ -557,7 +548,6 @@
     <div class="services-header">
       <div class="section-eyebrow">What We Do</div>
       <h2 class="section-title">Comprehensive Financial Services</h2>
-      <p class="section-desc">With over 23 years of experience in project and retail financing, we offer expert consultancy across a wide range of financial needs.</p>
     </div>
 
     <div class="services-grid">
@@ -610,6 +600,23 @@
         </ul>
       </div>
 
+      <!-- Service 4: Home Loans -->
+      <div class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+        </div>
+        <h3>Home Loans</h3>
+        <p>We facilitate home loan solutions for customers purchasing properties in approved residential projects developed by builders. Our team coordinates with banks, builders, and borrowers to ensure a smooth and hassle-free financing experience.</p>
+        <ul class="service-points">
+          <li>Financing for Under-Construction & Ready-to-Move Properties</li>
+          <li>Assistance with Approved Builder Projects</li>
+          <li>Competitive Interest Rates</li>
+          <li>Faster Loan Processing</li>
+          <li>Higher Loan Eligibility Assessment</li>
+          <li>Support with Documentation & Disbursement</li>
+        </ul>
+      </div>
+
     </div>
   </div>
 </section>
@@ -644,9 +651,10 @@
         <div class="team-avatar">SG</div>
         <div class="team-info">
           <h3>CA Suresh Garg</h3>
-          <div class="role">Director &amp; Founder</div>
-          <p>A qualified Chartered Accountant and commerce graduate from Rajasthan University with 25 years in financial consultancy. He manages clients' financial requirements across private and nationalised banks.</p>
-          <p style="margin-top:10px">Currently a member of the Tax Association of India, and former Chairman of the Jaipur Branch of the Institute of Chartered Accountants of India.</p>
+          <div class="role">Director &amp; Founder · Chartered Accountant · Insolvency Professional</div>
+          <p>Suresh Garg is a distinguished Chartered Accountant. Qualified in 1994, with over three decades of professional experience, he has advised corporates, PSUs, banks, and business enterprises on audits, taxation, corporate laws, finance, risk management, and strategic business planning.</p>
+          <p style="margin-top:10px">He has held several key leadership positions at the Jaipur Branch of ICAI, serving as Chairman, CICASA (2007–08); Secretary, Jaipur Branch of ICAI (2008–09); and Vice Chairman, Jaipur Branch of ICAI (2009–10).</p>
+          <p style="margin-top:10px">An accomplished Insolvency Professional, CA Suresh Garg combines deep financial expertise with practical business insights to deliver effective solutions in corporate finance, debt advisory, restructuring, and regulatory compliance.</p>
           <span class="team-tag">Registered Insolvency Professional · IBC</span>
         </div>
       </div>
@@ -655,10 +663,10 @@
         <div class="team-avatar">RG</div>
         <div class="team-info">
           <h3>CA Ritik Garg</h3>
-          <div class="role">Director</div>
-          <p>A qualified Chartered Accountant and commerce graduate from Rajasthan University with 5 years of experience in financial consultancy.</p>
-          <p style="margin-top:10px">Working alongside his father, he ensures clients' debt financial needs are fulfilled at the earliest and at the best possible terms and conditions.</p>
-          <span class="team-tag">Financial Consultancy · Debt Financing</span>
+          <div class="role">Director · Chartered Accountant</div>
+          <p>A qualified Chartered Accountant with extensive experience in financial consultancy, corporate debt advisory, and funding solutions. Ritik plays a key role in helping businesses and individuals secure financing through banks and NBFCs, ensuring seamless execution from initial assessment to final disbursement.</p>
+          <p style="margin-top:10px">His strong understanding of financial structuring and client requirements enables him to deliver practical and result-oriented solutions.</p>
+          <span class="team-tag">Debt Syndication · Corporate Finance · Project Funding · Financial Advisory</span>
         </div>
       </div>
     </div>
@@ -670,7 +678,7 @@
   <div class="section-inner">
     <div class="section-eyebrow">Get In Touch</div>
     <h2 class="section-title">Let's Discuss Your Requirements</h2>
-    <p class="section-desc">Reach out to us for any project financing, OTS or non-fund based financing needs. We're here to help.</p>
+    <p class="section-desc">"Reach out to us for your finance needs. We're here to help."</p>
 
     <div class="contact-grid">
       <div class="contact-info">
@@ -689,10 +697,9 @@
             <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
           </div>
           <div>
-            <div class="contact-label">Mobile Numbers</div>
+            <div class="contact-label">Mobile Number</div>
             <div class="contact-val">
-              <a href="tel:+918233937501">+91-8233937501</a><br/>
-              <a href="tel:+919829056921">+91-9829056921</a>
+              <a href="tel:+918233937501">+91-8233937501</a>
             </div>
           </div>
         </div>
@@ -704,8 +711,8 @@
           <div>
             <div class="contact-label">Email Address</div>
             <div class="contact-val">
-              <a href="mailto:garg.ritik97@gmail.com">garg.ritik97@gmail.com</a><br/>
-              <a href="mailto:vsg_sgarg@yahoo.com">vsg_sgarg@yahoo.com</a>
+              <a href="mailto:ritik.garg@vsgcorporate.com">ritik.garg@vsgcorporate.com</a><br/>
+              <a href="mailto:suresh.garg@vsgcorporate.com">suresh.garg@vsgcorporate.com</a>
             </div>
           </div>
         </div>
@@ -820,10 +827,10 @@
           <div class="footer-logo-circle">VSG</div>
           <div class="footer-logo-text">
             <strong>VSG Corporate Services</strong>
-            <span>Private Limited</span>
+            <span>Connecting Capital. Empowering Growth</span>
           </div>
         </div>
-        <p>A trusted financial consultancy established in 2002. Specialising in Project Financing, One Time Settlement and Non-Fund Based Financing — serving clients across India.</p>
+        <p>A trusted financial consultant established in 2002. Specialising in Project Finance, One-Time Settlement, Corporate Debt Advisory and Structured Funding Solutions — serving clients across India.</p>
       </div>
 
       <div class="footer-col">
@@ -849,11 +856,7 @@
     </div>
 
     <div class="footer-bottom">
-      <p>© 2024 V.S.G Corporate Services Pvt. Ltd. All rights reserved.</p>
-      <div class="footer-reg">
-        CIN: U67190RJ2002PTC017565 &nbsp;|&nbsp; GSTIN: 08AACCV0416G2ZM<br/>
-        PAN: AACCV0416G
-      </div>
+      <p>© 2024 VSG Corporate Services. All rights reserved.</p>
     </div>
   </div>
 </footer>
